@@ -9,7 +9,6 @@
         public Graphic UI_Element;
         public float MotorForce, SteerForce, BrakeForce;
         public WheelCollider FR_R_Wheel, RE_R_Wheel;
-        public int wheel_offset = 100;
 
         RectTransform rectT;
         Vector2 centerPoint;
@@ -62,7 +61,8 @@
 
 
             // Car Movement Handler
-            float v = Input.GetAxis("Vertical") * MotorForce;
+            //float v = Input.GetAxis("Vertical") * MotorForce;
+            float v = 1 * MotorForce;
             //float h = Input.GetAxis("Horizontal") * SteerForce;
             float h = GetClampedValue() * SteerForce;
             RE_R_Wheel.motorTorque = v;
@@ -79,14 +79,14 @@
                 RE_R_Wheel.brakeTorque = 0;
             }
 
-            if (Input.GetAxis("Vertical") == 0)
-            {
-                RE_R_Wheel.brakeTorque = BrakeForce;
-            }
-            else
-            {
-                RE_R_Wheel.brakeTorque = 0;
-            }
+            //if (Input.GetAxis("Vertical") == 0)
+            //{
+            //    RE_R_Wheel.brakeTorque = BrakeForce;
+            //}
+            //else
+            //{
+            //    RE_R_Wheel.brakeTorque = 0;
+            //}
 
 
     }

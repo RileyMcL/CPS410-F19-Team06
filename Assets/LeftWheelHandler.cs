@@ -61,7 +61,8 @@
 
 
             // Car Movement Handler
-            float v = Input.GetAxis("Vertical") * MotorForce;
+            //float v = Input.GetAxis("Vertical") * MotorForce;
+            float v = 1 * MotorForce;
             //float h = Input.GetAxis("Horizontal") * SteerForce;
             float h = GetClampedValue() * SteerForce;
             RE_L_Wheel.motorTorque = v;
@@ -78,14 +79,14 @@
                 RE_L_Wheel.brakeTorque = 0;
             }
 
-            if (Input.GetAxis("Vertical") == 0)
-            {
-                RE_L_Wheel.brakeTorque = BrakeForce;
-            }
-            else
-            {
-                RE_L_Wheel.brakeTorque = 0;
-            }
+            //if (Input.GetAxis("Vertical") == 0)
+            //{
+            //    RE_L_Wheel.brakeTorque = BrakeForce;
+            //}
+            //else
+            //{
+            //    RE_L_Wheel.brakeTorque = 0;
+            //}
 
 
     }

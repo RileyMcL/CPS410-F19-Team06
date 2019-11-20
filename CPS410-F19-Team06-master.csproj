@@ -241,6 +241,7 @@
     <Compile Include="Assets\BotHandler.cs" />
     <Compile Include="Assets\Car_Control.cs" />
     <Compile Include="Assets\LeftWheelHandler.cs" />
+    <Compile Include="Assets\QuitButton.cs" />
     <Compile Include="Assets\RightWheelHandler.cs" />
     <Compile Include="Assets\Test.cs" />
   </ItemGroup>
